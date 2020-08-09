@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '.././../assets/images/foodLogo.jpg';
+import logo from '../../assets/pokerLogo.png';
 import { Link } from 'react-router-dom';
 import '../../index.scss';
 
