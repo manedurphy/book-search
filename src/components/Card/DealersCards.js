@@ -2,10 +2,10 @@ import React from 'react';
 import cardBack from '../../assets/cardBack.png';
 import '../../index.scss';
 
-const DealersCards = ({ image, revealed }) => {
+const DealersCards = ({ image, showDealer }) => {
   return (
     <div className="card">
-      {revealed ? (
+      {showDealer ? (
         <img src={image} alt="card" />
       ) : (
         <img src={cardBack} alt="card-back" />
