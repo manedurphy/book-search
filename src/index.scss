@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(71, 60, 60);
+
+  .nav-links {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+      color: white;
+    }
+  }
+
+  img {
+    width: 66px;
+    height: 66px;
+  }
+}
+
+.dealer,
+.playing,
+.player {
+  display: flex;
+  justify-content: center;
+  // width: 180px;
+  // height: 33vh;
+}
+
+.play-field {
+  text-align: center;
+}
