@@ -7,6 +7,7 @@ const Home = () => {
   const [dealersCards, setDealersCards] = useState([]);
   const [playersCards, setPlayersCards] = useState([]);
   const [playingCards, setPlayingCards] = useState([]);
+  const [first, setFirst] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,7 +52,11 @@ const Home = () => {
     };
     fetchData();
   }, []);
-  console.log(playingCards);
+
+  const playHandler = () => {
+    setFirst(!first);
+  };
+
   return (
     <div className="play-field">
       {playingCards.length > 0 &&
@@ -63,11 +68,17 @@ const Home = () => {
             dealer={dealersCards}
             player={playersCards}
             playing={playingCards}
+            first={first}
           />
           <h2>you</h2>
         </Fragment>
       ) : (
-        <p>loading...</p>
+        <h3>loading...</h3>
+      )}
+      {!first ? (
+        <button onClick={playHandler}>Play</button>
+      ) : (
+        <button>final round</button>
       )}
     </div>
   );
